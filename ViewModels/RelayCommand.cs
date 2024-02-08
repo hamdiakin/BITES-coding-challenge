@@ -44,12 +44,14 @@ namespace HRManagementApp.ViewModels
             return true;
         }
 
+
         void ICommand.Execute(object? parameter)
         {
-            if (CanExecute != null)
+            if(Execute != null)
             {
                 Execute();
             }
         }
+
     }
 }

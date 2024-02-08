@@ -8,12 +8,15 @@ C:\Users\hamdi.akin\Desktop\bayts\HRManagementApp\bin\Debug\net7.0-windows\MahAp
 C:\Users\hamdi.akin\Desktop\bayts\HRManagementApp\bin\Debug\net7.0-windows\Microsoft.Xaml.Behaviors.dll
 C:\Users\hamdi.akin\Desktop\bayts\HRManagementApp\bin\Debug\net7.0-windows\de\MahApps.Metro.resources.dll
 C:\Users\hamdi.akin\Desktop\bayts\HRManagementApp\obj\Debug\net7.0-windows\HRManagementApp.csproj.AssemblyReference.cache
-C:\Users\hamdi.akin\Desktop\bayts\HRManagementApp\obj\Debug\net7.0-windows\MainWindow.g.cs
+C:\Users\hamdi.akin\Desktop\bayts\HRManagementApp\obj\Debug\net7.0-windows\App.baml
+C:\Users\hamdi.akin\Desktop\bayts\HRManagementApp\obj\Debug\net7.0-windows\Views\ControlWindow.g.cs
+C:\Users\hamdi.akin\Desktop\bayts\HRManagementApp\obj\Debug\net7.0-windows\Views\EditAddEmployeeWindow.g.cs
 C:\Users\hamdi.akin\Desktop\bayts\HRManagementApp\obj\Debug\net7.0-windows\App.g.cs
+C:\Users\hamdi.akin\Desktop\bayts\HRManagementApp\obj\Debug\net7.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Users\hamdi.akin\Desktop\bayts\HRManagementApp\obj\Debug\net7.0-windows\HRManagementApp_MarkupCompile.cache
 C:\Users\hamdi.akin\Desktop\bayts\HRManagementApp\obj\Debug\net7.0-windows\HRManagementApp_MarkupCompile.lref
-C:\Users\hamdi.akin\Desktop\bayts\HRManagementApp\obj\Debug\net7.0-windows\App.baml
-C:\Users\hamdi.akin\Desktop\bayts\HRManagementApp\obj\Debug\net7.0-windows\MainWindow.baml
+C:\Users\hamdi.akin\Desktop\bayts\HRManagementApp\obj\Debug\net7.0-windows\Views\ControlWindow.baml
+C:\Users\hamdi.akin\Desktop\bayts\HRManagementApp\obj\Debug\net7.0-windows\Views\EditAddEmployeeWindow.baml
 C:\Users\hamdi.akin\Desktop\bayts\HRManagementApp\obj\Debug\net7.0-windows\HRManagementApp.g.resources
 C:\Users\hamdi.akin\Desktop\bayts\HRManagementApp\obj\Debug\net7.0-windows\HRManagementApp.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\hamdi.akin\Desktop\bayts\HRManagementApp\obj\Debug\net7.0-windows\HRManagementApp.AssemblyInfoInputs.cache
@@ -25,4 +28,3 @@ C:\Users\hamdi.akin\Desktop\bayts\HRManagementApp\obj\Debug\net7.0-windows\refin
 C:\Users\hamdi.akin\Desktop\bayts\HRManagementApp\obj\Debug\net7.0-windows\HRManagementApp.pdb
 C:\Users\hamdi.akin\Desktop\bayts\HRManagementApp\obj\Debug\net7.0-windows\HRManagementApp.genruntimeconfig.cache
 C:\Users\hamdi.akin\Desktop\bayts\HRManagementApp\obj\Debug\net7.0-windows\ref\HRManagementApp.dll
-C:\Users\hamdi.akin\Desktop\bayts\HRManagementApp\obj\Debug\net7.0-windows\GeneratedInternalTypeHelper.g.cs

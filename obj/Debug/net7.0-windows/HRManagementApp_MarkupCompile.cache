@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\hamdi.akin\Desktop\bayts\HRManagementApp\App.xaml
-11407045341
+2-159313497
 
-9589025134
+141098244723
 201-175661226
-MainWindow.xaml;
+Views\ControlWindow.xaml;Views\EditAddEmployeeWindow.xaml;
 
 False
 

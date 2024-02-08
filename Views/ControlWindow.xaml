@@ -1,0 +1,194 @@
+﻿<local1:AppWindow x:Class="HRManagementApp.Views.ControlWindow"
+                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                  xmlns:local1="clr-namespace:HRManagementApp"
+                  xmlns:local2="clr-namespace:HRManagementApp.ViewModels"
+                  xmlns:local3="clr-namespace:HRManagementApp.Converters"
+                  mc:Ignorable="d"
+                  Title="{Binding Title}"
+                  WindowStartupLocation="CenterScreen"
+                  MinWidth="700"
+                  MinHeight="550">
+
+    <local1:AppWindow.DataContext>
+        <local2:ControlWindowViewModel />
+    </local1:AppWindow.DataContext>
+
+    <local1:AppWindow.Resources>
+        <Style x:Key="DataGridTextColumnStyle"
+               TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment"
+                    Value="Center" />
+        </Style>
+
+        <Style x:Key="DataGridColumnHeaderStyle"
+               TargetType="DataGridColumnHeader">
+            <Setter Property="HorizontalContentAlignment"
+                    Value="Center" />
+            <Setter Property="FontWeight"
+                    Value="Bold" />
+            <Setter Property="FontSize"
+                    Value="12" />
+        </Style>
+        <local3:PositionEnumToStringConverter x:Key="PositionEnumToStringConverter" />
+    </local1:AppWindow.Resources>
+
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Border Grid.Column="0"
+                Grid.Row="0"
+                Margin="10"
+                BorderBrush="AliceBlue"
+                BorderThickness="1">
+            <Grid Grid.Column="0"
+                  Grid.Row="0"
+                  Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <GroupBox Header="Active Employees">
+                    <DataGrid ItemsSource="{Binding ActiveEmployees}"
+                              SelectedItem="{Binding SelectedEmployee}"
+                              AutoGenerateColumns="False"
+                              CanUserAddRows="False"
+                              CanUserDeleteRows="False"
+                              CanUserResizeColumns="False"
+                              CanUserResizeRows="False"
+                              IsReadOnly="True"
+                              Margin="5"
+                              AlternationCount="{Binding ActiveEmployees.Count}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Personel"
+                                                Binding="{Binding AlternationIndex, RelativeSource={RelativeSource AncestorType=DataGridRow}}"
+                                                ElementStyle="{StaticResource DataGridTextColumnStyle}"
+                                                HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" />
+                            <DataGridTextColumn Header="Name"
+                                                Binding="{Binding Name}"
+                                                Width="*"
+                                                ElementStyle="{StaticResource DataGridTextColumnStyle}"
+                                                HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" />
+                            <DataGridTextColumn Header="Surname"
+                                                Binding="{Binding Surname}"
+                                                Width="*"
+                                                ElementStyle="{StaticResource DataGridTextColumnStyle}"
+                                                HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" />
+                            <DataGridTextColumn Header="Position"
+                                                Binding="{Binding Path=Position, Converter={StaticResource PositionEnumToStringConverter}}"
+                                                Width="*"
+                                                ElementStyle="{StaticResource DataGridTextColumnStyle}"
+                                                HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" />
+                            <DataGridTextColumn Header="Experience"
+                                                Binding="{Binding Experience}"
+                                                Width="*"
+                                                ElementStyle="{StaticResource DataGridTextColumnStyle}"
+                                                HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </GroupBox>
+
+                <StackPanel Grid.Row="1"
+                            Orientation="Horizontal"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Center"
+                            Margin="5">
+                    <Button Content="Save"
+                            Command="{Binding SaveCommand}"
+                            Margin="5" />
+                    <Button Content="Load"
+                            Command="{Binding LoadCommand}"
+                            Margin="5" />
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <Border Grid.Column="1"
+                Grid.Row="0"
+                Margin="10"
+                BorderBrush="AliceBlue"
+                BorderThickness="1">
+            <Grid Grid.Column="1"
+                  Grid.Row="0"
+                  Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <GroupBox Header="Positions to Update">
+                    <DataGrid ItemsSource="{Binding PositionsToUpdate}"
+                              SelectedItem="{Binding SelectedPosition}"
+                              AutoGenerateColumns="False"
+                              CanUserAddRows="False"
+                              CanUserDeleteRows="False"
+                              CanUserResizeColumns="False"
+                              CanUserResizeRows="False"
+                              IsReadOnly="True"
+                              Margin="5"
+                              AlternationCount="{Binding PositionsToUpdate.Count}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Personel"
+                                                Binding="{Binding AlternationIndex, RelativeSource={RelativeSource AncestorType=DataGridRow}}"
+                                                ElementStyle="{StaticResource DataGridTextColumnStyle}"
+                                                HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" />
+                            <DataGridTextColumn Header="Name"
+                                                Binding="{Binding Name}"
+                                                Width="*"
+                                                ElementStyle="{StaticResource DataGridTextColumnStyle}"
+                                                HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" />
+                            <DataGridTextColumn Header="Surname"
+                                                Binding="{Binding Surname}"
+                                                Width="*"
+                                                ElementStyle="{StaticResource DataGridTextColumnStyle}"
+                                                HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" />
+                            <DataGridTextColumn Header="Position"
+                                                Binding="{Binding Path=Position, Converter={StaticResource PositionEnumToStringConverter}}"
+                                                Width="*"
+                                                ElementStyle="{StaticResource DataGridTextColumnStyle}"
+                                                HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" />
+                            <DataGridTextColumn Header="Experience"
+                                                Binding="{Binding Experience}"
+                                                Width="*"
+                                                ElementStyle="{StaticResource DataGridTextColumnStyle}"
+                                                HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" />
+                            <DataGridTextColumn Header="Status"
+                                                Binding="{Binding Status}"
+                                                Width="65"
+                                                ElementStyle="{StaticResource DataGridTextColumnStyle}"
+                                                HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </GroupBox>
+
+                <StackPanel Grid.Row="1"
+                            Orientation="Horizontal"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Center"
+                            Margin="5">
+                    <Button Content="Add"
+                            Command="{Binding AddCommand}"
+                            Margin="5" />
+                    <Button Content="Edit"
+                            Command="{Binding EditCommand}"
+                            Margin="5" />
+                    <Button Content="Remove"
+                            Command="{Binding RemoveCommand}"
+                            Margin="5" />
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</local1:AppWindow>
