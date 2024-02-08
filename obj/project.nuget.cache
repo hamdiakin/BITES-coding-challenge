@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "iEbo2tSIRnir1yuyc7Ex8zZDd6gO7tZBLYv7akvzX8lhVjXg0L+FnWs6CSiHsDGomjSQdQHu2rSI6IDUD8xNHQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\hamdi.akin\\Desktop\\bayts\\HRManagementApp\\HRManagementApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\hamdi.akin\\.nuget\\packages\\controlzex\\4.4.0\\controlzex.4.4.0.nupkg.sha512",
+    "C:\\Users\\hamdi.akin\\.nuget\\packages\\mahapps.metro\\2.4.10\\mahapps.metro.2.4.10.nupkg.sha512",
+    "C:\\Users\\hamdi.akin\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.19\\microsoft.xaml.behaviors.wpf.1.1.19.nupkg.sha512",
+    "C:\\Users\\hamdi.akin\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512"
+  ],
+  "logs": []
+}
